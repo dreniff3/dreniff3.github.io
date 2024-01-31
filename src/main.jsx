@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
     ]
   },
-],   { basename: "/dreniff3.github.io/" })
+],   { basename: import.meta.env.DEV ? '/' : '/react-vite-gh-pages/' })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
