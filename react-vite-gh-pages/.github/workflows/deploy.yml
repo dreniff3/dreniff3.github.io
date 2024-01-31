@@ -46,6 +46,9 @@ jobs:
         with:
           # Upload dist repository
           path: './dist'
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json' # THIS PATTERN did the trick for me.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
