@@ -24,10 +24,11 @@ const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
     ]
   },
+  {basename: "/dreniff3.github.io/"},
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )
